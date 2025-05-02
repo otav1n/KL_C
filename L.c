@@ -71,6 +71,8 @@ int main()
         fflush(arquivo);
         fclose(arquivo);
     }
+
+
     
     return 0;
 }
