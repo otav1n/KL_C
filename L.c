@@ -12,6 +12,8 @@ void getDateTime(char *buffer, int size)
              tm.tm_hour, tm.tm_min, tm.tm_sec);
 }
 
+
+
 int main()
 {
     FILE *arquivo;
