@@ -13,8 +13,6 @@ void getDateTime(char *buffer, int size)
 }
 
 
-
-
 int main()
 {
     FILE *arquivo;
