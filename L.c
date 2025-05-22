@@ -21,8 +21,6 @@ int main()
 
     ShowWindow(GetConsoleWindow(), SW_HIDE);
 
-
-    
     while (1)
     {
         Sleep(10);
